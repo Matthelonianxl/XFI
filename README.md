@@ -7,6 +7,7 @@ If you're looking for features like drag and drop, asynchronous uploads and prog
 XFI is a simple a jQuery plugin that can be easily integrated into your existing code.
 
 Project status: **Active**
+
 Current version: **1.1**
 
 - [View a demo](http://alistairholt.co.uk/projects/xfi/demo)
@@ -29,16 +30,19 @@ Current version: **1.1**
 
 Setting up XFI is really simple:
 
-Make sure jQuery is available in your page
-Add the XFI script to your page
-Set the multiple attribute and add a CSS class of 'xfi' to any file inputs on which you want to enable XFI
-Call $.XFI() after the DOM has loaded
+- Make sure jQuery is available in your page
+- Add the XFI script to your page
+- Set the multiple attribute and add a CSS class of '`xfi`' to any file inputs on which you want to enable XFI
+- Call `$.XFI()` after the DOM has loaded
+
 XFI only has two configuration options, both of which are optional:
 
 **submitButtonFeeback**
+
 (Boolean) Whether or not to use the form's submit button to provide feedback to the user about file uploads that are taking place on form submission. Defaults to true.
 
 **debug**
+
 (Boolean) Whether or not to put XFI into debug mode. In debug mode XFI will log to the JavaScript console if it is available. Defaults to false.
 
 For example:
@@ -60,7 +64,7 @@ File information list markup:
       <li class="xfi-file-information">IMG_0001.jpg <i>(560 Kb)</i></li>
     </ul>
 
-And finally, a CSS class of 'busy' will be added to the form's submit button on submission if the submitButtonFeedback option is enabled.
+And finally, a CSS class of '`busy`' will be added to the form's submit button on submission if the submitButtonFeedback option is enabled.
 
 ## Browser Support
 
