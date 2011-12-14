@@ -80,13 +80,13 @@ Internet Explorer 6-9 do not currently support the multiple attribute on file in
 
 Current version - 1.1
 
-- [Production](https://github.com/downloads/alistairholt/XFI/jquery.xfi-1.0.min.js.gz) (Minified and Gzipped - 4 Kb)
-- [Development](https://github.com/downloads/alistairholt/XFI/jquery.xfi-1.0.js) (8 Kb)
+- [Production](https://github.com/downloads/alistairholt/XFI/jquery.xfi-1.1.min.js.gz) (Minified and Gzipped - 4 Kb)
+- [Development](https://github.com/downloads/alistairholt/XFI/jquery.xfi-1.1.js) (8 Kb)
 
 
 ## License
 
-XFI is licensed under a MIT License (See MIT-LICENSE.txt).
+XFI is licensed under a MIT License
 
 ## Feedback
 
