@@ -77,7 +77,7 @@
           // Build a proxy file input
           $proxyInput = $("<button>", {
             type: "button",
-            "class": "xfi-input",
+            "class": "xfi-proxy-input",
             text: self.buttonText
           }).attr("data-xfi", inputUID);
 
@@ -113,7 +113,9 @@
           $cancel.before(" ");
 
           // Build a UL to hold file information
-          $fileInfo = $("<ul>").attr("data-xfi", inputUID);
+          $fileInfo = $("<ul>", {
+            "class": "xfi-file-information-container"
+          }).attr("data-xfi", inputUID);
 
           $fileInfo.insertBefore($proxyInput).hide();
 
@@ -143,18 +145,11 @@
             if (files.length > 0) {
               $(files).each(function () {
                 var fileName, fileSize;
-                // Mozilla File attributes
-                //   name, size
-                // WebKit File attributes
-                //   name/fileName, size/fileSize
-                // Opera File attributes
-                //   name, size
-                // Internet Explorer File attributes
-                //   ?
                 self.log("File chosen", this);
                 fileName = this.name;
                 fileSize = this.size;
                 $("<li>", {
+                  "class": "xfi-file-information",
                   html: fileName + " <i>(" + self.humanizeFileSize(fileSize) + ")</i>"
                 }).appendTo($fileInfo);
               });
@@ -180,7 +175,8 @@
 
                     $form.find("[type='submit']:last")
                       .val("Uploading " + totalFileCount + " " + fileOrFiles + "... Please wait...")
-                      .attr("disabled", "disabled");
+                      .attr("disabled", "disabled")
+                      .addClass("busy");
                   }
                 });
               }
